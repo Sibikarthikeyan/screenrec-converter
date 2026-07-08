@@ -1,5 +1,7 @@
 # Screen Recording Converter
 
+[![CI](https://github.com/Sibikarthikeyan/screenrec-converter/actions/workflows/ci.yml/badge.svg)](https://github.com/Sibikarthikeyan/screenrec-converter/actions/workflows/ci.yml)
+
 Automatically converts Ubuntu GNOME screen recordings from `.webm` to `.mp4`
 the moment recording finishes — no more opening a terminal and running ffmpeg
 by hand.

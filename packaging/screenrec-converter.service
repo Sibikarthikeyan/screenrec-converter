@@ -1,0 +1,25 @@
+# systemd user service: auto-start the converter on login.
+#
+# Install:
+#   mkdir -p ~/.config/systemd/user
+#   cp packaging/screenrec-converter.service ~/.config/systemd/user/
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now screenrec-converter
+#
+# Logs: journalctl --user -u screenrec-converter -f
+
+[Unit]
+Description=Screen Recording Converter (WebM to MP4)
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/screenrec-converter run
+Restart=on-failure
+RestartSec=5
+# Keep idle footprint small.
+Nice=10
+IOSchedulingClass=idle
+
+[Install]
+WantedBy=default.target

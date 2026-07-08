@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Screen Recording Converter
+Comment=Automatically convert GNOME screen recordings to MP4
+Exec=screenrec-converter tray
+Icon=media-record
+Terminal=false
+Categories=AudioVideo;Utility;
+Keywords=screencast;webm;mp4;convert;
